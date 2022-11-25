@@ -7,7 +7,7 @@ pipeline {
         stage('PreBuild-Email') {
            steps {
                script {
-                   def mailRecipients = 'dario_gguevara@hotmail.com'
+                   def mailRecipients = 'dario_guevara@hotmail.com'
                    def jobName = currentBuild.fullDisplayName
                    //emailext body: '''${SCRIPT, template="groovy-html.template"}''',
                    emailext body: '''SENIOR USUARIO''',
@@ -53,7 +53,7 @@ pipeline {
             /*SE VALIDA EN EL PIPELINE SON POSITIVAS
             el nombre de las variables (nombre del proyecto, número de construccíon y URL de construcción)
             son verificales con el estado existoso del pipeline*/
-            echo   "emailext body: Compruebe la salida de la consola en:${env.BUILD_URL} para ver los resultados \n para: dario_gguevara@hotmail.com \n asunto: La construcción falló en Jenkins: ${currentBuild.fullDisplayName}"
+            echo   "emailext body: Compruebe la salida de la consola en:${env.BUILD_URL} para ver los resultados \n para: dario_guevara@hotmail.com \n asunto: La construcción falló en Jenkins: ${currentBuild.fullDisplayName}"
         }
         /*PIPELINE FALLE*/
         /*failure {
